@@ -1,7 +1,7 @@
 /* utPod_driver.cpp
 Demo Driver for the UtPod.
 
-Mihir Shah and Chris Acosta
+Roger Priebe
 EE 312 10/16/18
 
 This is a basic driver for the UtPod.
@@ -20,102 +20,89 @@ int main(int argc, char *argv[])
 {
     UtPod t;
 
-    t.showSongList();
-    cout << endl << endl;
-    Song s1("Zedd", "True Colors", 4);
+    Song s1("Zedd", "True Color", 4);
+    cout << endl;
     int result = t.addSong(s1);
-    cout << "result = " << result << endl;
+    cout << "add result = " << result << endl;
 
     t.showSongList();
-    cout << endl;
 
-    Song s2("Dwilly", "be right there", 5);
+    Song s2("Hippo Campus", "Bubbles", 5);
+    cout << endl;
     result = t.addSong(s2);
-    cout << "result = " << result << endl;
+    cout << "add result = " << result << endl;
 
     t.showSongList();
-    cout << endl;
 
     Song s3("Jeremy Zucker", "thinking 2 much", 6);
+    cout << endl;
     result = t.addSong(s3);
-    cout << "result = " << result << endl;
+    cout << "add result = " << result << endl;
 
     t.showSongList();
-    cout << endl;
 
-    Song s4("HONNE", "306", 7);
+    Song s4("Dwilly", "be right there", 7);
+    cout << endl;
     result = t.addSong(s4);
-    cout << "result = " << result << endl;
+    cout << "add result = " << result << endl;
 
     t.showSongList();
-    cout << endl;
 
-    Song s5("Grant", "The Edge", 24);
+    Song s5("HONNE", "306", 241);
+    cout << endl;
     result = t.addSong(s5);
     cout << "add result = " << result << endl;
 
     t.showSongList();
-    cout << endl;
 
-    Song s6("Martin Garrix", "Yottabyte", 2);
+    Song s6("HONNE", "Sometimes", 2);
+    cout << endl;
     result = t.addSong(s6);
     cout << "add result = " << result << endl;
 
     t.showSongList();
+
     cout << endl;
-
-    Song s7("Hippo Campus", "Bubbles", 24);
-    result = t.addSong(s7);
-    cout << "add result = " << result << endl;
-
-    result = t.addSong(s7);
-    cout << "add result = " << result << endl; //add again
-
-    t.showSongList();
-    cout << endl;
-
-    t.showSongList();
-    cout << endl;
-    t.sortSongList();
-    t.showSongList();
-
-    cout << "Everyday I'm shuffling" << endl << endl;
+    cout << "Everyday I'm shuffling" << endl;
     t.shuffle();
     t.showSongList();
 
-    result = t.removeSong(s2);
-    cout << "delete result = " << result << endl;
-
-    result = t.removeSong(s3);
-    cout << "delete result = " << result << endl;
-
+    cout << endl;
+    cout << "Check Sort" << endl;
+    t.sortSongList();
     t.showSongList();
 
+    cout << endl;
+    result = t.removeSong(s2); //remove "Hippo Campus", "Bubbles", 5
+    cout << "delete result = " << result << endl;
+
+    result = t.removeSong(s3); //remove "Jeremy Zucker", "thinking 2 much", 6
+    cout << "delete result = " << result << endl;
+
+    cout << endl;
+    t.showSongList();
+
+    cout << endl;
     result = t.removeSong(s1);
     cout << "delete result = " << result << endl;
 
+    cout << endl;
     result = t.removeSong(s5);
     cout << "delete result = " << result << endl;
 
+    cout << endl;
     result = t.removeSong(s4);
-    cout << "delete result = " << result << endl << endl;
+    cout << "delete result = " << result << endl;
 
+    cout << endl;
     t.showSongList();
 
-
-    result = t.removeSong(s7);
-    cout <<  endl << endl;
-
+    cout << endl;
+    result = t.addSong(s5);
+    cout << "add result = " << result << endl;
 
     t.showSongList();
-
-
-
-    //result = t.addSong(s5);
-    //cout << "add result = " << result << endl;
-
-    //t.showSongList();
-    //cout << "memory = " << t.getRemainingMemory() << endl;
+    cout << "memory = " << t.getRemainingMemory() << endl;
 
 
 }
