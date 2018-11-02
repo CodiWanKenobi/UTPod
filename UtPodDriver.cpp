@@ -102,7 +102,19 @@ int main(int argc, char *argv[])
     cout << "add result = " << result << endl;
 
     t.showSongList();
+    cout << endl;
     cout << "memory = " << t.getRemainingMemory() << endl;
 
+    Song s7("Jeremy Zucker", "desire", 513);
+    cout << endl;
+    result = t.addSong(s7);
+    cout << "add result = " << result << endl;
 
+    t.showSongList();
+
+    cout << endl;
+    Song s8("Jeremy Zucker", "firefly", 5);
+    result = t.removeSong(s8);
+    cout << "delete result = " << result << endl;
+    t.showSongList();
 }
